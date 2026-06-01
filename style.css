@@ -1,0 +1,332 @@
+/* --- RESET & ROOT VARIABLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --maroon-dark: #4A0E17;
+    --maroon-bright: #6B1D2F;
+    --gold: #C5A059;
+    --gold-light: #F4E8D1;
+    --text-dark: #222222;
+    --text-muted: #555555;
+    --bg-cream: #FAF6EE;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Page Frame/Poster wrapper to match layout */
+.page-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    background: var(--bg-cream);
+    background-image: radial-gradient(circle, #ffffff 0%, var(--bg-cream) 100%);
+    border: 12px solid var(--maroon-dark);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+/* --- 1. NAVIGATION BAR --- */
+.navbar {
+    width: 100%;
+    background-color: var(--maroon-dark);
+    padding: 10px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--gold);
+}
+
+.donate-btn {
+    background-color: #7A1C1C;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid var(--gold);
+    transition: background 0.3s;
+}
+
+.donate-btn:hover {
+    background-color: var(--gold);
+    color: var(--maroon-dark);
+}
+
+/* --- 2. BRANDING & HEADER --- */
+.branding-section {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    text-align: center;
+}
+
+.ngo-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 0.75rem;
+    color: #c41e3a;
+    font-weight: 700;
+}
+
+.header-titles {
+    width: 75%;
+    text-align: center;
+}
+
+.main-title {
+    font-family: 'Marcellus', serif;
+    color: var(--maroon-dark);
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.sub-title {
+    font-family: 'Marcellus', serif;
+    color: var(--maroon-dark);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.hindi-title {
+    font-family: 'Rozha One', serif;
+    color: var(--maroon-bright);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.registration-details {
+    font-size: 0.78rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.gold-divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 0 40px;
+}
+
+/* --- 3. HERO SECTION --- */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px 10px 20px;
+}
+
+.hero-motto {
+    font-family: 'Rozha One', Georgia, serif;
+    font-size: 3rem;
+    color: #3A0A11;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: #111;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+/* Graphical display structure mockup */
+.hero-collage-container {
+    width: 100%;
+    height: 450px;
+    margin-top: 30px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Setting standard image placeholder configuration */
+.collage-placeholder-bg {
+    width: 100%;
+    height: 100%;
+    /* Replace 'hero-banner.jpg' with your photo collage containing the visuals */
+    background: url('hero-banner.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.95;
+}
+
+/* --- 4. CORE PILLARS / SERVICES --- */
+.pillars-section {
+    padding: 20px 40px 40px 40px;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.pillar-card {
+    background: transparent;
+    border-right: 1px solid rgba(197, 160, 89, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.pillar-card:last-child {
+    border-right: none;
+}
+
+.white-box {
+    background: white;
+}
+
+.pillar-header {
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.icon-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    background-color: var(--gold-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    color: var(--maroon-dark);
+    font-size: 1.6rem;
+    transition: transform 0.3s ease;
+}
+
+.pillar-card:hover .icon-circle {
+    transform: scale(1.1);
+    background-color: var(--gold);
+    color: #fff;
+}
+
+.pillar-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.4;
+}
+
+/* --- 5. FOOTER & BOTTOM RIBBON --- */
+.footer-section {
+    background-color: var(--maroon-dark);
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.footer-ribbon {
+    background: linear-gradient(180deg, var(--maroon-bright) 0%, var(--maroon-dark) 100%);
+    border-top: 3px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding: 15px 0;
+    font-family: 'Rozha One', serif;
+    font-size: 2.2rem;
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Scaling for smaller screens */
+@media (max-width: 992px) {
+    .pillars-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    .pillar-card {
+        border-right: none;
+        border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        padding-bottom: 20px;
+    }
+    .branding-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .logo-area, .header-titles {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-motto {
+        font-size: 2rem;
+    }
+}

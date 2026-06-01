@@ -3,119 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chhatrapati Gramvikas Bahuuddeshiya Sanstha</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background: #fff;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        .logo-container img {
-            height: 60px;
-            margin-right: 15px;
-        }
-        .ngo-name h1 {
-            font-size: 1.2rem;
-            margin: 0;
-            color: #d32f2f; /* Matching the red in your logo */
-        }
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 0 20px;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.5rem;
-            max-width: 800px;
-        }
-        .cta-button {
-            background: #d32f2f;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-        .cta-button:hover {
-            background: #b71c1c;
-        }
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 50px;
-        }
-    </style>
+    <title>Chatrapati Gramvikas Bhauddeshiya Sanstha (National)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;600;700&family=Rozha+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.jpg" alt="CGBS NGO Logo">
-            <div class="ngo-name">
-                <h1>Chhatrapati Gramvikas Bahuuddeshiya Sanstha</h1>
-            </div>
-        </div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Projects</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+    <header class="navbar">
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Initiatives</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">CSR</a></li>
+                <li><a href="#">Darpan</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="donate-btn">Donate Now</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <h2>Promoting Social Progress</h2>
-        <p>Empowering rural communities through education, healthcare, and sustainable development.</p>
-        <a href="#contact" class="cta-button">Join Our Mission</a>
-    </section>
+    <main class="page-wrapper">
 
-    <div style="padding: 50px 10%; text-align: center;">
-        <h3>Welcome to CGBS-ORG.IN</h3>
-        <p>Dedicated to creating a better life for everyone through our various social initiatives. From water rejuvenation to tribal education, we strive for a brighter tomorrow.</p>
-    </div>
+        <section class="branding-section">
+            <div class="logo-area">
+                <img src="logo.png" alt="NGO Logo" class="ngo-logo">
+                <div class="tagline">Promoting Social Progress and Better Life</div>
+            </div>
+            
+            <div class="header-titles">
+                <h1 class="main-title"> Chhatrapati GRAMVIKAS BHAUDDESHIYA SANSTHA</h1>
+                <h2 class="sub-title">(NATIONAL)</h2>
+                <h3 class="hindi-title">छत्रपती ग्रामविकास बहुउद्देशीय संस्था (अखिल भारतीय)</h3>
+                
+                <div class="registration-details">
+                    <p>Trust Registration No. : F-13578, 13/03/2004 Solapur 12887/2003 | 12A No. : 902209914-02325</p>
+                    <p>80G No. : AABTC8682MF20251 | CSR No. : CSR00089606 | Darpan ID : MH/2019/0224758</p>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2026 Chhatrapati Gramvikas Bahuuddeshiya Sanstha | cgbs-org.in</p>
-    </footer>
+        <hr class="gold-divider">
+
+        <section class="hero-section">
+            <h1 class="hero-motto">सेवा, संस्कार और समावेशी विकास की यात्रा</h1>
+            
+            <p class="hero-description">
+                अनुसूचित जाति एवं अनुसूचित जनजाति समुदायों के <br>
+                सामाजिक, शैक्षिक एवं आर्थिक सशक्तिकरण हेतु <br>
+                समर्पित एक राष्ट्रीय सामाजिक संस्था
+            </p>
+
+            <div class="hero-collage-container">
+                <div class="collage-placeholder-bg"></div>
+            </div>
+        </section>
+
+        <section class="pillars-section">
+            <div class="pillars-grid">
+                
+                <div class="pillar-card">
+                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h4 class="pillar-title">समान सेवा<br>और उत्थान</h4>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h4 class="pillar-title">शिक्षा और<br>संस्कार</h4>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h4 class="pillar-title">सक्षम युवा<br>सशक्त भारत</h4>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-hands-holding"></i>
+                    </div>
+                    <h4 class="pillar-title">वृद्ध सेवा<br>परम सेवा</h4>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-user-fringe"></i>
+                    </div>
+                    <h4 class="pillar-title">महिला सशक्तिकरण<br>हमारा संकल्प</h4>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h4 class="pillar-title">समावेशी समाज<br>समृद्ध भारत</h4>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="footer-section">
+            <div class="footer-ribbon">
+                <span>सेवा</span> • <span>सामर्थ्य</span> • <span>संस्कार</span>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Programs</a>
+                <a href="#">News</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+            
+            <p class="copyright">© 2026 Chhatrapati Gramvikas Bhauddeshiya Sanstha. All rights reserved.</p>
+        </footer>
+
+    </main>
 
 </body>
 </html>
