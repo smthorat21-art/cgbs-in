@@ -1,138 +1,170 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatrapati Gramvikas Bhauddeshiya Sanstha (National)</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Chhatrapati Gramvikas Bahuuddeshiya Sanstha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;600;700&family=Rozha+One&display=swap" rel="stylesheet">
-</head>
-<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%);
+            overflow-x: hidden;
+        }
 
-    <header class="navbar">
-        <nav class="nav-container">
-            <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Initiatives</a></li>
-                <li><a href="#">Programs</a></li>
-                <li><a href="#">CSR</a></li>
-                <li><a href="#">Darpan</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <a href="#" class="donate-btn">Donate Now</a>
-        </nav>
+        /* Continuous Slow Rotation for Earth */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin 25s linear infinite;
+        }
+
+        /* Gentle Swaying/Rotation for Umbrella */
+        @keyframes subtle-rotate {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        .animate-umbrella {
+            animation: subtle-rotate 8s ease-in-out infinite;
+        }
+
+        /* Glow effects for buttons */
+        .glow-btn {
+            box-shadow: 0 0 15px rgba(52, 211, 153, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glow-btn:hover {
+            box-shadow: 0 0 25px rgba(52, 211, 153, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Dropdown custom styling */
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+        .group:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen flex flex-col justify-between">
+
+    <header class="w-full text-center py-6 z-10">
+        <div class="inline-block bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-white/20">
+            <h1 class="text-xl md:text-2xl font-bold tracking-wide text-emerald-400 flex items-center gap-3 justify-center">
+                <i class="fa-solid fa-hands-holding-circle text-blue-400"></i>
+                Chhatrapati Gramvikas Bahuuddeshiya Sanstha
+            </h1>
+        </div>
     </header>
 
-    <main class="page-wrapper">
-
-        <section class="branding-section">
-            <div class="logo-area">
-                <img src="logo.png" alt="NGO Logo" class="ngo-logo">
-                <div class="tagline">Promoting Social Progress and Better Life</div>
-            </div>
+    <main class="flex-grow flex flex-col items-center justify-center relative px-4 my-8">
+        
+        <div class="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
             
-            <div class="header-titles">
-                <h1 class="main-title"> Chhatrapati GRAMVIKAS BHAUDDESHIYA SANSTHA</h1>
-                <h2 class="sub-title">(NATIONAL)</h2>
-                <h3 class="hindi-title">छत्रपती ग्रामविकास बहुउद्देशीय संस्था (अखिल भारतीय)</h3>
-                
-                <div class="registration-details">
-                    <p>Trust Registration No. : F-13578, 13/03/2004 Solapur 12887/2003 | 12A No. : 902209914-02325</p>
-                    <p>80G No. : AABTC8682MF20251 | CSR No. : CSR00089606 | Darpan ID : MH/2019/0224758</p>
+            <div class="absolute inset-0 animate-umbrella opacity-80 z-0 flex items-center justify-center">
+                <div class="w-full h-full rounded-full border-4 border-dashed border-emerald-400/40 relative flex items-center justify-center">
+                    <span class="absolute top-2 text-emerald-300 text-2xl md:text-3xl" title="Education"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <span class="absolute right-2 text-blue-300 text-2xl md:text-3xl" title="Health"><i class="fa-solid fa-heart-pulse"></i></span>
+                    <span class="absolute bottom-2 text-emerald-300 text-2xl md:text-3xl" title="Women Empowerment"><i class="fa-solid fa-person-dress"></i></span>
+                    <span class="absolute left-2 text-blue-300 text-2xl md:text-3xl" title="Tribal Development"><i class="fa-solid fa-people-roof"></i></span>
+                    <span class="absolute top-1/4 right-6 text-emerald-200 text-xl" title="Social Welfare"><i class="fa-solid fa-handshake-angle"></i></span>
+                    <span class="absolute top-1/4 left-6 text-blue-200 text-xl" title="Environmental Protection"><i class="fa-solid fa-seedling"></i></span>
+                    
+                    <div class="w-full h-1/2 border-b-4 border-emerald-400 absolute top-0 rounded-t-full bg-gradient-to-b from-emerald-500/10 to-transparent"></div>
                 </div>
             </div>
-        </section>
 
-        <hr class="gold-divider">
-
-        <section class="hero-section">
-            <h1 class="hero-motto">सेवा, संस्कार और समावेशी विकास की यात्रा</h1>
-            
-            <p class="hero-description">
-                अनुसूचित जाति एवं अनुसूचित जनजाति समुदायों के <br>
-                सामाजिक, शैक्षिक एवं आर्थिक सशक्तिकरण हेतु <br>
-                समर्पित एक राष्ट्रीय सामाजिक संस्था
-            </p>
-
-            <div class="hero-collage-container">
-                <div class="collage-placeholder-bg"></div>
+            <div class="w-40 h-40 md:w-56 md:h-56 rounded-full bg-gradient-to-r from-blue-600 to-emerald-600 shadow-[0_0_50px_rgba(59,130,246,0.5)] animate-spin-slow z-10 flex items-center justify-center border border-blue-400/30 overflow-hidden opacity-90">
+                <div class="absolute inset-0 border-r border-l border-white/20 rounded-full animate-pulse"></div>
+                <div class="absolute inset-0 border-t border-b border-white/20 rounded-full"></div>
+                <i class="fa-solid fa-earth-asia text-6xl md:text-8xl text-blue-200/40"></i>
             </div>
-        </section>
 
-        <section class="pillars-section">
-            <div class="pillars-grid">
-                
-                <div class="pillar-card">
-                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
-                    <div class="icon-circle">
-                        <i class="fa-solid fa-hands-holding-child"></i>
-                    </div>
-                    <h4 class="pillar-title">समान सेवा<br>और उत्थान</h4>
+            <div class="absolute -bottom-6 w-56 md:w-72 bg-slate-800/90 backdrop-blur-md border-b-4 border-blue-500 px-4 py-2 rounded-t-xl z-20 text-center shadow-xl">
+                <div class="flex justify-center gap-1 text-emerald-400 text-xl">
+                    <i class="fa-solid fa-book-open"></i>
                 </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
-                    <div class="icon-circle">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <h4 class="pillar-title">शिक्षा और<br>संस्कार</h4>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
-                    <div class="icon-circle">
-                        <i class="fa-solid fa-people-group"></i>
-                    </div>
-                    <h4 class="pillar-title">सक्षम युवा<br>सशक्त भारत</h4>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
-                    <div class="icon-circle">
-                        <i class="fa-solid fa-hands-holding"></i>
-                    </div>
-                    <h4 class="pillar-title">वृद्ध सेवा<br>परम सेवा</h4>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
-                    <div class="icon-circle">
-                        <i class="fa-solid fa-user-fringe"></i>
-                    </div>
-                    <h4 class="pillar-title">महिला सशक्तिकरण<br>हमारा संकल्प</h4>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-header">SOCIAL WORK & UPLIFTMENT</div>
-                    <div class="icon-circle">
-                        <i class="fa-solid fa-handshake-angle"></i>
-                    </div>
-                    <h4 class="pillar-title">समावेशी समाज<br>समृद्ध भारत</h4>
-                </div>
-
+                <p class="text-[10px] md:text-xs text-slate-400 tracking-widest uppercase font-semibold mt-1">Foundation of Knowledge</p>
             </div>
-        </section>
-
-        <footer class="footer-section">
-            <div class="footer-ribbon">
-                <span>सेवा</span> • <span>सामर्थ्य</span> • <span>संस्कार</span>
-            </div>
-            
-            <div class="footer-links">
-                <a href="#">About</a>
-                <a href="#">Programs</a>
-                <a href="#">News</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-            </div>
-            
-            <p class="copyright">© 2026 Chhatrapati Gramvikas Bhauddeshiya Sanstha. All rights reserved.</p>
-        </footer>
+        </div>
 
     </main>
+
+    <nav class="max-w-6xl mx-auto w-full px-6 grid grid-cols-2 md:grid-cols-6 gap-4 z-30 pb-12">
+        
+        <div class="relative group">
+            <button class="w-full glow-btn bg-slate-900/80 border border-emerald-500/40 hover:border-emerald-400 py-3 px-4 rounded-xl flex items-center justify-between text-sm font-medium">
+                <span><i class="fa-solid fa-address-card mr-2 text-emerald-400"></i>About Us</span>
+                <i class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
+            </button>
+            <div class="absolute bottom-full mb-2 left-0 w-full bg-slate-900/95 border border-slate-700 rounded-xl p-2 dropdown-menu shadow-2xl backdrop-blur-lg">
+                <a href="#" class="block px-3 py-2 hover:bg-emerald-600/30 rounded-lg text-xs transition">NGO Overview</a>
+                <a href="#" class="block px-3 py-2 hover:bg-emerald-600/30 rounded-lg text-xs transition">Our Vision</a>
+                <a href="#" class="block px-3 py-2 hover:bg-emerald-600/30 rounded-lg text-xs transition">Our Mission</a>
+                <a href="#" class="block px-3 py-2 hover:bg-emerald-600/30 rounded-lg text-xs transition">President's Message</a>
+                <a href="#" class="block px-3 py-2 hover:bg-emerald-600/30 rounded-lg text-xs transition">Key Achievements</a>
+            </div>
+        </div>
+
+        <div class="relative group col-span-1">
+            <button class="w-full glow-btn bg-slate-900/80 border border-blue-500/40 hover:border-blue-400 py-3 px-4 rounded-xl flex items-center justify-between text-sm font-medium">
+                <span><i class="fa-solid fa-briefcase mr-2 text-blue-400"></i>Our Work</span>
+                <i class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
+            </button>
+            <div class="absolute bottom-full mb-2 left-0 w-64 bg-slate-900/95 border border-slate-700 rounded-xl p-2 dropdown-menu shadow-2xl backdrop-blur-lg">
+                <a href="#" class="block px-3 py-2 hover:bg-blue-600/30 rounded-lg text-xs transition">Free Old Age Home</a>
+                <a href="#" class="block px-3 py-2 hover:bg-blue-600/30 rounded-lg text-xs transition">Bed-Ridden Care Center</a>
+                <a href="#" class="block px-3 py-2 hover:bg-blue-600/30 rounded-lg text-xs transition">De-Addiction Workshops</a>
+                <a href="#" class="block px-3 py-2 hover:bg-blue-600/30 rounded-lg text-xs transition">SSC Exam Marks Mechanism</a>
+                <a href="#" class="block px-3 py-2 hover:bg-blue-600/30 rounded-lg text-xs transition">Women & Youth Empowerment</a>
+                <a href="#" class="block px-3 py-2 hover:bg-blue-600/30 rounded-lg text-xs transition">Tribal Health Awareness</a>
+            </div>
+        </div>
+
+        <a href="#" class="glow-btn bg-slate-900/80 border border-emerald-500/40 hover:border-emerald-400 py-3 px-4 rounded-xl flex items-center justify-center text-sm font-medium transition text-center">
+            <i class="fa-solid fa-images mr-2 text-emerald-400"></i>Gallery
+        </a>
+
+        <div class="relative group">
+            <button class="w-full glow-btn bg-slate-900/80 border border-blue-500/40 hover:border-blue-400 py-3 px-4 rounded-xl flex items-center justify-between text-sm font-medium">
+                <span><i class="fa-solid fa-rocket mr-2 text-blue-400"></i>Projects</span>
+                <i class="fa-solid fa-chevron-down text-xs text-slate-400"></i>
+            </button>
+            <div class="absolute bottom-full mb-2 right-0 md:left-0 w-64 bg-slate-900/95 border border-slate-700 rounded-xl p-2 dropdown-menu shadow-2xl backdrop-blur-lg">
+                <a href="#" class="block px-3 py-2 hover:bg-blue-600/30 rounded-lg text-xs transition">Cow Cancer Research Center</a>
+                <a href="#" class="block px-3 py-2 hover:bg-blue-600/30 rounded-lg text-xs transition">Computer & AI Rural Learning Bus</a>
+                <a href="#" class="block px-3 py-2 hover:bg-blue-600/30 rounded-lg text-xs transition">MOM School Counseling Program</a>
+            </div>
+        </div>
+
+        <a href="#" class="glow-btn bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 py-3 px-4 rounded-xl flex items-center justify-center text-sm font-bold transition text-center shadow-lg border border-emerald-400/30">
+            <i class="fa-solid fa-heart mr-2 text-rose-300 animate-pulse"></i>Donate Now
+        </a>
+
+        <a href="#" class="glow-btn bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 py-3 px-4 rounded-xl flex items-center justify-center text-sm font-bold transition text-center shadow-lg border border-blue-400/30">
+            <i class="fa-solid fa-user-plus mr-2 text-blue-200"></i>Join Us
+        </a>
+
+    </nav>
+
+    <footer class="w-full text-center py-6 border-t border-white/10 bg-black/20 backdrop-blur-sm z-10">
+        <p class="text-xs tracking-wider text-slate-400 uppercase mb-1">Official Digital Platform</p>
+        <p class="text-sm md:text-base italic text-emerald-300 font-medium tracking-wide">
+            "Promoting Social Progress and Better Life"
+        </p>
+    </footer>
 
 </body>
 </html>
